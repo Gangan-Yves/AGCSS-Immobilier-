@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mune</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">Logo</a>
+        <div class="group">
+            <ul class="navigation">
+                <li><a href="#">Accueil</a></li>
+                <li><a href="#">A propos</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <div class="search">
+                <span class="icon">
+                    <ion-icon name="search-outline"
+                    class="searchBtn"></ion-icon>
+                    <ion-icon name="close-outline"
+                    class="closeBtn"></ion-icon>
+                </span>
+            </div>
+            <ion-icon name="menu-outline" class="menuToggle"></ion-icon>
+        </div>
+        <div class="searchBox">
+            <input type="text" placeholder="recherche...">
+        </div>
+    </header>
+    
+    <!--home-->
+
+    <section class="home">
+        <div class="left">
+            <h1>AG<span>CSS</span></h1>
+            <h4>Une technologie revolutionnnaire</h4>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+            <p>Lorem ipsum dolor sit amet consectetur.</p>
+            <p>Lorem ipsum dolor sit amet</p>
+            <button class="button-link">
+                <a href="">Projets Immobiliers</a>
+            </button>
+        </div>
+        <div class="right">
+            <img src="IMG/image1.JPG">
+        </div>
+    </section>
+
+    <!--service-->
+
+    <section class="services">
+        <h1 class="title">Nos services</h1>
+        <p class="small_title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam quae earum delectus illum id, officia facere saepe fuga dolorem magni at commodi est, perferendis doloribus laboriosam sit iste molestiae quo.</p>
+        <div class="list_service">
+            <div class="serv">
+              <img src="IMG/terrain.jpg" alt="">
+              <h4>vente de terrain</h4>
+              <p>(lorem ipsum dolor site)</p>
+              <button class="button-link">
+                <a href="">Projets Immobiliers</a>
+            </button>
+            </div>
+        </div>
+    </section>
+
+     <!--javascript-->
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+<script>
+    let searchBtn = document.querySelector('.searchBtn');
+    let closeBtn = document.querySelector('.closeBtn');
+    let searchBox = document.querySelector('.searchBox');
+    let navigation = document.querySelector('.navigation');
+    let menuToggle = document.querySelector('.menuToggle');
+    let header = document.querySelector('header');
+
+    searchBtn.onclick = function(){
+        searchBox.classList.add('active');
+        closeBtn.classList.add('active');
+        searchBtn.classList.add('active');
+        menuToggle.classList.add('hide');
+        header.classList.remove('open');
+
+
+    }
+    closeBtn.onclick = function(){
+        searchBox.classList.remove('active');
+        closeBtn.classList.remove('active');
+        searchBtn.classList.remove('active');
+        menuToggle.classList.remove('hide');
+    }
+    menuToggle.onclick = function(){
+        header.classList.toggle('open');
+        searchBox.classList.remove('active');
+        closeBtn.classList.remove('active');
+        searchBtn.classList.remove('active');
+    }
+</script>
+</body>
+</html>
